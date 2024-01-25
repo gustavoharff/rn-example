@@ -14,9 +14,6 @@
     "assetBundlePatterns": [
       "**/*"
     ],
-    "experiments": {
-      "tsconfigPaths": true
-    },
     "ios": {
       "supportsTablet": true
     },
