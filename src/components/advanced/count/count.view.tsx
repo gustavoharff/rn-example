@@ -1,8 +1,11 @@
 import { Text } from "react-native";
-import { useCountController } from "./count.controller";
+import { CountControllerConfig, useCountController } from "./count.controller";
 
-export function CountView() {
-  const controller = useCountController()
+interface CountViewProps extends CountControllerConfig {
+}
+
+export function CountView(props: CountViewProps) {
+  const controller = useCountController(props)
 
   return (
     <Text>{controller.count}</Text>

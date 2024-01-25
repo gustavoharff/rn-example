@@ -1,7 +1,11 @@
 import { useEffect, useState } from "react";
 
-export function useCountController() {
-  const [count, setCount] = useState(0)
+export interface CountControllerConfig {
+  initialCount?: number
+}
+
+export function useCountController(config: CountControllerConfig) {
+  const [count, setCount] = useState(config.initialCount || 0)
 
   useEffect(() => {
     const interval = setInterval(() => {
